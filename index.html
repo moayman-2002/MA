@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💘</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex; 
+      justify-content: center;
+      gap: 20px; 
+      height: 80px;
+      align-items: center;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: #ccc;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <div class="buttons">
+      <button id="yes">Yes 💘</button>
+      <button id="no">No 💔</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    let yesSize = 1; // الحجم الابتدائي
+
+    // دالة لتكبير زر Yes
+    function growYes() {
+      yesSize += 0.2; 
+      yesBtn.style.transform = `scale(${yesSize})`;
+    }
+
+    // Click on No button -> Yes يكبر فقط
+    noBtn.addEventListener("click", () => {
+      growYes();
+      if (noBtn.textContent === "No 💔") {
+        noBtn.textContent = "Are you sure?";
+      }
+    });
+
+    // Click on Yes button -> يذهب لصفحة الفيديو
+    yesBtn.addEventListener("click", () => {
+      window.location.href = "AQMCzjqdScCmIWNHYmtxO4xO0nuS2S1qcoqAspRsQp2xOrl3VtcGeG71Cj73bw_QPyaLOxPNYh5rKBj6x-yRuqJ7QBVFd3hghi7WMAkwFCqlKQ.mp4"; // هنا ضع رابط صفحة الفيديو الخاصة بك
+    });
+
+  </script>
+
+</body>
+</html>
